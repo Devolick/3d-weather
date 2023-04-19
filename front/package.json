@@ -1,5 +1,5 @@
 {
-  "name": "oasa",
+  "name": "weather-front",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
