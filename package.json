@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start:front": "npm --prefix ./front run start",
+    "start:end": "npm --prefix ./front run start",
+    "start": "concurrently \"npm run start:end\" \"npm run start:front\""
+  },
+  "author": "Dzmitry Dym",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
