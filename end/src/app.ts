@@ -2,10 +2,14 @@ import dotenv from "dotenv";
 dotenv.config();
 import express, { Express, Request, Response } from "express";
 import routes from "./routes/routes";
-import { config } from "./config";
+import { env } from "./env";
+import cors from "cors";
 
 const app: Express = express();
-const port = config.port;
+const port = env.port;
+
+// Cors
+app.use(cors());
 
 // Routes
 app.use("/api", routes);
