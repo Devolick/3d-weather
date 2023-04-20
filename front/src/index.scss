@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Roboto Serif";
+  src: url(./assets/fonts/RobotoSerif-Regular.ttf) format("truetype");
+}
+
+html,
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto Serif", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  & > #root {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+}
