@@ -1,14 +1,19 @@
 import { useLoader } from "@react-three/fiber";
-import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+import { useEffect, useRef, useState } from "react";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 
 interface Props {
-  readonly urls: string[];
+  readonly model: string;
 }
 
 function Model(props: Props) {
-  const fbx = useLoader(FBXLoader, props.urls);
+  const [loading, setLoading] = useState(true);
+  const obj = useLoader(OBJLoader, props.model, () => {});
+  const ref = useRef(null);
 
-  return <primitive object={fbx} scale={0.4} />;
+  useEffect(() => {}, []);
+
+  return <primitive ref={ref} object={obj.clone()} />;
 }
 
 export default Model;

@@ -1,1 +1,1 @@
-declare module "*.fbx";
+declare module "*.obj";

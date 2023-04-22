@@ -25,6 +25,12 @@ export interface WeatherForecastModel {
 
 export interface WeatherForecastDayModel {
   readonly date: Date;
+  readonly day: WeatherForecastDayInfoModel;
+}
+
+export interface WeatherForecastDayInfoModel {
+  readonly maxtempC: number;
+  readonly mintempC: number;
 }
 
 export interface WeatherAboutCityModel {

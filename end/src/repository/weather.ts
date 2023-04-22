@@ -44,6 +44,10 @@ export class WeatherRespository extends Repository {
               (cast: any) =>
                 ({
                   date: cast.date,
+                  day: {
+                    mintempC: cast.day.mintemp_c,
+                    maxtempC: cast.day.maxtemp_c,
+                  },
                 } as WeatherForecastDayModel)
             ),
           } as WeatherForecastModel,
