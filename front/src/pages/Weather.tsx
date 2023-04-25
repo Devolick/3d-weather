@@ -43,7 +43,7 @@ function Weather(props: Props) {
           city: "Athens",
         })
       );
-    }, 1000 * 60 * 5);
+    }, 1000 * 60 * 30);
     return () => {
       clearInterval(updateTime);
       clearInterval(updateWeather);
@@ -107,24 +107,24 @@ function Weather(props: Props) {
         <Col>
           <Col className="pb-6 opacity-90">
             <Row className="pb-2">
-              <Text className="text-5xl text-white">
+              <Text className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-white">
                 {dateTime.format("dddd")}
               </Text>
             </Row>
             <Row>
-              <Text className="text-3xl text-white">
+              <Text className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-white">
                 {dateTime.format("DD, MMM YYYY")}
               </Text>
             </Row>
             <Row>
-              <Text className="text-2xl text-white">
+              <Text className="text-2xl lg:text-3xl text-white">
                 {dateTime.format("h:m:ss a")}
               </Text>
             </Row>
           </Col>
-          <Row className="pb-2 opacity-70">
-            <RainyIcon className="mr-2 fill-white" />{" "}
-            <Text className="text-4xl text-white">
+          <Row className="pb-2 opacity-70 items-center">
+            <RainyIcon className="mr-2 fill-white h-8 sm:h-10 md:h-14 lg:h-20" />{" "}
+            <Text className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-white">
               {aboutCity?.current.precipMm} mm
             </Text>
           </Row>
